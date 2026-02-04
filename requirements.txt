@@ -1,9 +1,13 @@
-requests>=2.28.0
-selenium>=4.10.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
+# Automated Posting System Requirements
+
+# Core dependencies
+selenium>=4.15.0
+requests>=2.31.0
+webdriver-manager>=4.0.1
+undetected-chromedriver>=3.5.0
+
+# Utilities
 python-dotenv>=1.0.0
-Pillow>=10.0.0
-PySocks>=1.7.1
-webdriver-manager>=4.0.0
-undetected-chromedriver>=3.0.0
+
+# Optional development tools
+pytest>=7.4.0
