@@ -83,8 +83,8 @@ automated-posting-research/
 - Infrastructure hosting: $20-100/month / 基础设施托管: $20-100/月
 - **Total Estimated Cost**: $140-700/month / **总预估费用**: $140-700/月
 
-### Technical Requirements / 技术要求
-- Python 3.8+
+-### Technical Requirements / 技术要求
+- Python >=3.10
 - Chrome/Chromium browser
 - Internet connectivity
 
@@ -97,6 +97,11 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+## Security & Compliance / 安全与合规
+- Default behavior is dry-run; no external services are invoked by `main.py` unless explicitly enabled.
+- To run live actions you must set environment variable `ALLOW_LIVE=1` and pass `--live` to `main.py`.
+- This project is provided for research purposes. Do not use it to violate terms of service or to automate abusive activity.
 
 ## Performance Targets / 性能目标
 - Posting success rate: >90% / 发帖成功率: >90%
