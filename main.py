@@ -33,9 +33,25 @@ def main():
     print("   3. Monitor results in logs")
     print()
     
-    print("🔧 System Status: All modules ready for deployment")
-    print("🎯 Ready to create posts with @mention functionality")
-    
+    print("🔧 System Status: All modules ready for deployment (dry-run by default)")
+    print("🎯 To perform live actions, set environment variable ALLOW_LIVE=1 and pass --live")
+    print()
+    # Safety: default to dry-run. Require explicit env var and flag to run live.
+    args = sys.argv[1:]
+    live_flag = "--live" in args
+    allow_live_env = os.environ.get("ALLOW_LIVE", "0") == "1"
+
+    if live_flag and allow_live_env:
+        print("⚠️  LIVE MODE enabled — proceeding with real actions")
+        # Example: call the workflow manager here (commented out to avoid accidental run)
+        # from modules.workflow_manager import WorkflowManager
+        # manager = WorkflowManager()
+        # manager.create_post_with_real_services(post_content="Hello @huaqloud", first_name="Auto", last_name="Bot")
+    elif live_flag and not allow_live_env:
+        print("✋ Live flag provided but ALLOW_LIVE not set. Aborting live actions.")
+    else:
+        print("✅ Dry-run mode — no external services will be invoked.")
+
     return True
 
 if __name__ == "__main__":

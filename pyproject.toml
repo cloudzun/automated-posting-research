@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automated-posting-research"
+version = "0.1.0"
+description = "Research project for automated posting workflows (proxies, captcha, email handling)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [ {name = "Project Team"} ]
+requires-python = ">=3.10"
+
+dependencies = [
+  "requests>=2.28.0,<3.0",
+  "selenium>=4.10.0,<5.0",
+  "beautifulsoup4>=4.12.0,<5.0",
+  "lxml>=4.9.0,<5.0",
+  "python-dotenv>=1.0.0,<2.0",
+  "Pillow>=10.0.0,<11.0",
+  "PySocks>=1.7.1,<2.0",
+  "webdriver-manager>=4.0.0,<5.0",
+  "undetected-chromedriver>=3.0.0,<4.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cloudzun/automated-posting-research"

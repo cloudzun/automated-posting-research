@@ -1,13 +1,13 @@
-# Automated Posting System Requirements
+# Automated Posting System Requirements (pinned for reproducible installs)
 
 # Core dependencies
-selenium>=4.15.0
-requests>=2.31.0
-webdriver-manager>=4.0.1
-undetected-chromedriver>=3.5.0
+selenium==4.15.0
+requests==2.31.0
+webdriver-manager==4.0.1
+undetected-chromedriver==3.5.0
 
 # Utilities
-python-dotenv>=1.0.0
+python-dotenv==1.0.0
 
 # Optional development tools
-pytest>=7.4.0
+pytest==7.4.0
